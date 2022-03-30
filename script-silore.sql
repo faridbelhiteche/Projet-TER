@@ -24,14 +24,7 @@ CREATE TABLE silore.etats_recrutement(
 );
 
 DROP TABLE IF EXISTS silore.responsabilites CASCADE; -- récupère resp silose puis correspondance
-CREATE TABLE silore.responsabilitDROP TABLE IF EXISTS silore.contrats CASCADE;
-CREATE TABLE silore.contrats(
-    id_contrat integer NOT NULL PRIMARY KEY,
-    id_groupe integer REFERENCES silose.refi_groupes(id_groupe), --FK silose !
-    nom_contrat text,
-    nom_eotp text,
-    organisme_gestionnaire text,
-    date_cloture datees(
+CREATE TABLE silore.responsabilites DROP TABLE IF EXISTS silore.responsabilites CASCADE;
     id_responsabilite serial NOT NULL PRIMARY KEY, -- une responsabilité porte sur un groupe ?
     nom_responsabilite text NOT NULL,
     id_responsabilite_silose integer 
